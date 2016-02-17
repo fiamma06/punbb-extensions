@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE extension SYSTEM "ext-1.0.dtd">
+
+
+<extension engine="1.0">
+	<id>ext_broken_signals</id>
+	<title>Broken Signals</title>
+	<version>0.1.4</version>
+	<description>Add checkbox to forums page than disable translation information about forum to new topics page</description>
+	<author>kistenalex@gmail.com</author>
+
+	<minversion>1.4RC1</minversion>
+	<maxtestedon>1.4</maxtestedon>
+
+
+	<install><![CDATA[
+		include $ext_info['path'] . '/setup/install.php';
+	]]></install>
+
+
+	<uninstall><![CDATA[
+		include $ext_info['path'] . '/setup/uninstall.php';
+	]]></uninstall>
+
+
+	<hooks>
+		<!-- OPTIONS Block -->
+		<hook id="co_common"><![CDATA[
+			include $ext_info['path'] . '/hooks/co_common.php';
+		]]></hook>
+
+		<hook id="afo_edit_forum_pre_details_fieldset_end"><![CDATA[
+			include $ext_info['path'] . '/hooks/afo_edit_forum_pre_details_fieldset_end.php';
+		]]></hook>
+
+		<hook id="afo_save_forum_qr_update_forum"><![CDATA[
+			include $ext_info['path'] . '/hooks/afo_save_forum_qr_update_forum.php';
+		]]></hook>
+
+		<hook id="afo_edit_forum_qr_get_forum_details"><![CDATA[
+			include $ext_info['path'] . '/hooks/afo_edit_forum_qr_get_forum_details.php';
+		]]></hook>
+
+		<hook id="sf_fn_generate_action_search_query_qr_get_new"><![CDATA[
+			include $ext_info['path'] . '/hooks/sf_fn_generate_action_search_query_qr_get_new.php';
+		]]></hook>
+	</hooks>
+</extension>

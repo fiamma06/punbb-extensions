@@ -1,0 +1,38 @@
+#popup-confirm-window {
+    position: fixed;
+    width: 80%;
+
+    margin-left: auto; left: 0;
+    margin-right: auto; right: 0;
+
+    background: #fbfbfb;
+    padding: 25px;
+    font-family: Arial, Verdana, Helvetica, sans-serif;
+    box-shadow: 2px 2px 10px #666;
+
+    top: 45%;
+    margin-top: -200px;
+}
+
+#popup-confirm-window .popup-confirm-text {
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+#popup-confirm-window .popup-confirm-buttons {
+    display: block;
+    margin-top: 20px;
+    text-align: center;
+}
+#popup-confirm-window .popup-confirm-buttons .popup-button {
+    padding: 6px 10px;
+    margin: 0 5px;
+    color: #fff;
+    background: #113C5E;
+    display: inline-block;
+    font-size: 12px;
+}
+#popup-confirm-window .popup-confirm-buttons .popup-button:hover {
+    text-decoration: none;
+    background: #666;
+}

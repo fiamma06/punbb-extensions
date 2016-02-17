@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE extension SYSTEM "ext-1.0.dtd">
+
+
+<extension engine="1.0">
+	<id>ext_new_topic_message</id>
+	<title>Topic message</title>
+	<version>0.1.7</version>
+	<description>View message before adding new topic</description>
+	<author>kistenalex@gmail.com</author>
+
+	<minversion>1.4RC1</minversion>
+	<maxtestedon>1.4</maxtestedon>
+
+
+	<install><![CDATA[
+		include $ext_info['path'] . '/setup/install.php';
+	]]></install>
+
+
+	<uninstall><![CDATA[
+		include $ext_info['path'] . '/setup/uninstall.php';
+	]]></uninstall>
+
+
+	<hooks>
+		<!-- OPTIONS Block -->
+		<hook id="co_common"><![CDATA[
+			include $ext_info['path'] . '/hooks/co_common.php';
+		]]></hook>
+
+		<hook id="afo_edit_forum_pre_details_fieldset_end"><![CDATA[
+			include $ext_info['path'] . '/hooks/afo_edit_forum_pre_details_fieldset_end.php';
+		]]></hook>
+
+		<hook id="afo_save_forum_qr_update_forum"><![CDATA[
+			include $ext_info['path'] . '/hooks/afo_save_forum_qr_update_forum.php';
+		]]></hook>
+
+		<hook id="afo_edit_forum_qr_get_forum_details"><![CDATA[
+			include $ext_info['path'] . '/hooks/afo_edit_forum_qr_get_forum_details.php';
+		]]></hook>
+
+		<hook id="vf_pre_header_load"><![CDATA[
+			include $ext_info['path'] . '/hooks/vf_pre_header_load.php';
+		]]></hook>
+
+		<hook id="vf_qr_get_forum_info"><![CDATA[
+			include $ext_info['path'] . '/hooks/vf_qr_get_forum_info.php';
+		]]></hook>
+
+		<hook id="vf_end"><![CDATA[
+			include $ext_info['path'] . '/hooks/vf_end.php';
+		]]></hook>
+	</hooks>
+</extension>
